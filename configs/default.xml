@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature name="SistemadeGerenciamentodeVeiculos"/>
+	<feature name="Cadastro"/>
+	<feature name="Pessoas"/>
+	<feature name="Carros"/>
+	<feature name="Mecanicas"/>
+	<feature name="Consessionarias"/>
+	<feature name="Produtos"/>
+	<feature name="Validação"/>
+	<feature name="CPF"/>
+	<feature name="CNPJ"/>
+	<feature name="Chassis"/>
+	<feature name="Relatório"/>
+	<feature name="Seguros"/>
+	<feature name="Danos"/>
+	<feature name="Donos"/>
+	<feature name="Manutenções"/>
+	<feature name="Info. Gerais"/>
+	<feature name="Lembretes"/>
+</configuration>
