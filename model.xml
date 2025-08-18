@@ -44,14 +44,27 @@
 	<constraints>
 		<rule>
 			<imp>
-				<var>Pessoas</var>
+				<var>CPF</var>
+				<conj>
+					<var>Pessoas</var>
+					<var>Carros</var>
+				</conj>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>CNPJ</var>
 				<disj>
-					<not>
-						<var>Seguradoras</var>
-					</not>
+					<var>Carros</var>
 					<disj>
 						<var>Concessionarias</var>
-						<var>Mecanicas</var>
+						<disj>
+							<var>Mecanicas</var>
+							<disj>
+								<var>Produtos</var>
+								<var>Seguradoras</var>
+							</disj>
+						</disj>
 					</disj>
 				</disj>
 			</imp>
