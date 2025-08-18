@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="SistemadeGerenciamentodeVeiculos"/>
+	<feature automatic="selected" name="Cadastro"/>
+	<feature manual="selected" name="Pessoas"/>
+	<feature manual="selected" name="Carros"/>
+	<feature name="Mecanicas"/>
+	<feature name="Seguradoras"/>
+	<feature name="Concessionarias"/>
+	<feature name="Produtos"/>
+	<feature automatic="selected" name="Validação"/>
+	<feature manual="selected" name="CPF"/>
+	<feature name="CNPJ"/>
+	<feature manual="selected" name="Chassis"/>
+	<feature name="Numero de Série"/>
+	<feature automatic="selected" name="Relatório"/>
+	<feature manual="selected" name="Seguros"/>
+	<feature name="Danos"/>
+	<feature name="Donos"/>
+	<feature manual="selected" name="Manutenções"/>
+	<feature manual="selected" name="Info. Gerais"/>
+	<feature automatic="selected" name="Lembretes"/>
+	<feature manual="selected" name="Troca de Componentes"/>
+	<feature manual="selected" name="Revisões"/>
+	<feature name="Prazos"/>
+	<feature name="Andamento de Processos"/>
+</configuration>
