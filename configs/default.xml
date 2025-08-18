@@ -5,12 +5,14 @@
 	<feature name="Pessoas"/>
 	<feature name="Carros"/>
 	<feature name="Mecanicas"/>
-	<feature name="Consessionarias"/>
+	<feature name="Seguradoras"/>
+	<feature name="Concessionarias"/>
 	<feature name="Produtos"/>
 	<feature name="Validação"/>
 	<feature name="CPF"/>
 	<feature name="CNPJ"/>
 	<feature name="Chassis"/>
+	<feature name="Numero de Série"/>
 	<feature name="Relatório"/>
 	<feature name="Seguros"/>
 	<feature name="Danos"/>
@@ -18,4 +20,8 @@
 	<feature name="Manutenções"/>
 	<feature name="Info. Gerais"/>
 	<feature name="Lembretes"/>
+	<feature name="Troca de Componentes"/>
+	<feature name="Revisões"/>
+	<feature name="Prazos"/>
+	<feature name="Andamento de Processos"/>
 </configuration>

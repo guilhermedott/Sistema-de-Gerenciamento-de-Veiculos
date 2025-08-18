@@ -12,26 +12,49 @@
 	</properties>
 	<struct>
 		<and abstract="true" mandatory="true" name="SistemadeGerenciamentodeVeiculos">
-			<and name="Cadastro">
+			<or abstract="true" name="Cadastro">
 				<feature name="Pessoas"/>
 				<feature name="Carros"/>
 				<feature name="Mecanicas"/>
-				<feature name="Consessionarias"/>
+				<feature name="Seguradoras"/>
+				<feature name="Concessionarias"/>
 				<feature name="Produtos"/>
-			</and>
-			<and name="Validação">
+			</or>
+			<and abstract="true" name="Validação">
 				<feature name="CPF"/>
 				<feature name="CNPJ"/>
 				<feature name="Chassis"/>
+				<feature name="Numero de Série"/>
 			</and>
-			<and name="Relatório">
+			<or abstract="true" name="Relatório">
 				<feature name="Seguros"/>
 				<feature name="Danos"/>
 				<feature name="Donos"/>
 				<feature name="Manutenções"/>
 				<feature name="Info. Gerais"/>
-			</and>
-			<feature name="Lembretes"/>
+			</or>
+			<or abstract="true" name="Lembretes">
+				<feature name="Troca de Componentes"/>
+				<feature name="Revisões"/>
+				<feature name="Prazos"/>
+				<feature name="Andamento de Processos"/>
+			</or>
 		</and>
 	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>Pessoas</var>
+				<disj>
+					<not>
+						<var>Seguradoras</var>
+					</not>
+					<disj>
+						<var>Concessionarias</var>
+						<var>Mecanicas</var>
+					</disj>
+				</disj>
+			</imp>
+		</rule>
+	</constraints>
 </featureModel>
