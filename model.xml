@@ -55,18 +55,27 @@
 			<imp>
 				<var>CNPJ</var>
 				<disj>
-					<var>Carros</var>
+					<var>Concessionarias</var>
 					<disj>
-						<var>Concessionarias</var>
+						<var>Mecanicas</var>
 						<disj>
-							<var>Mecanicas</var>
-							<disj>
-								<var>Produtos</var>
-								<var>Seguradoras</var>
-							</disj>
+							<var>Produtos</var>
+							<var>Seguradoras</var>
 						</disj>
 					</disj>
 				</disj>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Chassis</var>
+				<var>Carros</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Numero de Série</var>
+				<var>Produtos</var>
 			</imp>
 		</rule>
 	</constraints>
