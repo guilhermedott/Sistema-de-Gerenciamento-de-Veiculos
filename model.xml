@@ -72,11 +72,5 @@
 				<var>Carros</var>
 			</imp>
 		</rule>
-		<rule>
-			<imp>
-				<var>Numero de Série</var>
-				<var>Produtos</var>
-			</imp>
-		</rule>
 	</constraints>
 </featureModel>
