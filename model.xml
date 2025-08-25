@@ -20,22 +20,22 @@
 				<feature name="Concessionarias"/>
 				<feature name="Produtos"/>
 			</or>
-			<and abstract="true" name="Validação">
+			<or abstract="true" name="Validacao">
 				<feature name="CPF"/>
 				<feature name="CNPJ"/>
 				<feature name="Chassis"/>
-				<feature name="Numero de Série"/>
-			</and>
-			<or abstract="true" name="Relatório">
+				<feature name="Numero de Serie"/>
+			</or>
+			<or abstract="true" name="Relatorio">
 				<feature name="Seguros"/>
 				<feature name="Danos"/>
 				<feature name="Donos"/>
-				<feature name="Manutenções"/>
+				<feature name="Manutencoes"/>
 				<feature name="Info. Gerais"/>
 			</or>
 			<or abstract="true" name="Lembretes">
 				<feature name="Troca de Componentes"/>
-				<feature name="Revisões"/>
+				<feature name="Revisoes"/>
 				<feature name="Prazos"/>
 				<feature name="Andamento de Processos"/>
 			</or>
