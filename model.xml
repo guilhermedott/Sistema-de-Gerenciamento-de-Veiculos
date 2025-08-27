@@ -12,7 +12,7 @@
 	</properties>
 	<struct>
 		<and abstract="true" mandatory="true" name="SistemadeGerenciamentodeVeiculos">
-			<or abstract="true" name="Cadastro">
+			<or abstract="true" mandatory="true" name="Cadastro">
 				<feature name="Pessoas"/>
 				<feature name="Carros"/>
 				<feature name="Mecanicas"/>
@@ -20,19 +20,19 @@
 				<feature name="Concessionarias"/>
 				<feature name="Produtos"/>
 			</or>
-			<or abstract="true" name="Validacao">
+			<or abstract="true" mandatory="true" name="Validacao">
 				<feature name="CPF"/>
 				<feature name="CNPJ"/>
 				<feature name="Chassis"/>
 				<feature name="Numero de Serie"/>
 			</or>
-			<or abstract="true" name="Relatorio">
+			<and abstract="true" name="Relatorio">
 				<feature name="Seguros"/>
 				<feature name="Danos"/>
 				<feature name="Donos"/>
 				<feature name="Manutencoes"/>
 				<feature name="Info. Gerais"/>
-			</or>
+			</and>
 			<or abstract="true" name="Lembretes">
 				<feature name="Troca de Componentes"/>
 				<feature name="Revisoes"/>
@@ -44,32 +44,26 @@
 	<constraints>
 		<rule>
 			<imp>
-				<var>CPF</var>
-				<conj>
-					<var>Pessoas</var>
-					<var>Carros</var>
-				</conj>
+				<var>Carros</var>
+				<var>Chassis</var>
 			</imp>
 		</rule>
 		<rule>
 			<imp>
-				<var>CNPJ</var>
+				<var>Pessoas</var>
+				<var>CPF</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
 				<disj>
 					<var>Concessionarias</var>
 					<disj>
+						<var>Seguradoras</var>
 						<var>Mecanicas</var>
-						<disj>
-							<var>Produtos</var>
-							<var>Seguradoras</var>
-						</disj>
 					</disj>
 				</disj>
-			</imp>
-		</rule>
-		<rule>
-			<imp>
-				<var>Chassis</var>
-				<var>Carros</var>
+				<var>CNPJ</var>
 			</imp>
 		</rule>
 	</constraints>

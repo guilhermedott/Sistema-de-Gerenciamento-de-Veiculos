@@ -8,20 +8,20 @@
 	<feature name="Seguradoras"/>
 	<feature name="Concessionarias"/>
 	<feature manual="selected" name="Produtos"/>
-	<feature automatic="selected" name="Validação"/>
+	<feature automatic="selected" name="Validacao"/>
 	<feature name="CPF"/>
-	<feature manual="selected" name="CNPJ"/>
+	<feature automatic="selected" manual="selected" name="CNPJ"/>
 	<feature name="Chassis"/>
-	<feature manual="selected" name="Numero de Série"/>
-	<feature automatic="selected" name="Relatório"/>
+	<feature name="Numero de Serie"/>
+	<feature automatic="selected" name="Relatorio"/>
 	<feature manual="selected" name="Seguros"/>
 	<feature name="Danos"/>
 	<feature name="Donos"/>
-	<feature manual="selected" name="Manutenções"/>
+	<feature manual="selected" name="Manutencoes"/>
 	<feature manual="selected" name="Info. Gerais"/>
 	<feature automatic="selected" name="Lembretes"/>
 	<feature name="Troca de Componentes"/>
-	<feature name="Revisões"/>
+	<feature name="Revisoes"/>
 	<feature manual="selected" name="Prazos"/>
 	<feature manual="selected" name="Andamento de Processos"/>
 </configuration>
