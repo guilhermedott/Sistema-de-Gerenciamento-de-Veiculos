@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import java.awt.Color;
-
+/*if[Carros]*/
 public class Cadastro_Carro extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
@@ -90,3 +90,4 @@ public class Cadastro_Carro extends JDialog {
 		}
 	}
 }
+/*end[Carros]*/

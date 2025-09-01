@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import java.awt.Color;
-
+/*if[Produtos]*/
 public class Cadastro_Produto extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
@@ -90,3 +90,4 @@ public class Cadastro_Produto extends JDialog {
 		}
 	}
 }
+/*end[Produtos]*/
