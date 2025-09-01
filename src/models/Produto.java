@@ -1,5 +1,5 @@
 package models;
-/*if[Produtos]*/
+
 public class Produto {
     private String produto;
     private String serialNumber;
@@ -30,4 +30,3 @@ public class Produto {
         return "Produto {produto='" + produto + "', serialNumber='" + serialNumber + "'}";
     }
 }
-/*end[Produtos]*/

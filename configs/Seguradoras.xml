@@ -6,7 +6,7 @@
 	<feature name="Carros"/>
 	<feature name="Mecanicas"/>
 	<feature manual="selected" name="Seguradoras"/>
-	<feature name="Concessionarias"/>
+	<feature name="Consessionarias"/>
 	<feature name="Produtos"/>
 	<feature automatic="selected" name="Validacao"/>
 	<feature name="CPF"/>

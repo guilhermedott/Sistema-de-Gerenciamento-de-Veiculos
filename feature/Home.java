@@ -42,27 +42,31 @@ public class Home extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		/*if[Cadastro]*/
 		JButton btnCadastro = new JButton("Cadastro");
 		btnCadastro.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		btnCadastro.setBackground(new Color(240, 240, 240));
 		btnCadastro.setBounds(289, 167, 231, 75);
 		contentPane.add(btnCadastro);
-		
+		/*end[Cadastro]*/
+	
 		JLabel lblNewLabel = new JLabel("Escolha uma Funcionalidade");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 40));
 		lblNewLabel.setBounds(167, 25, 503, 92);
 		contentPane.add(lblNewLabel);
-		
+		/*if[Relatorio]*/
 		JButton btnRelatorio = new JButton("Relatórios");
 		btnRelatorio.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		btnRelatorio.setBackground(UIManager.getColor("Button.background"));
 		btnRelatorio.setBounds(289, 294, 231, 75);
 		contentPane.add(btnRelatorio);
-		
+		/*end[Relatorio]*/
+		/*if[Lembretes]*/
 		JButton btnLembretes = new JButton("Lembretes");
 		btnLembretes.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		btnLembretes.setBackground(UIManager.getColor("Button.background"));
 		btnLembretes.setBounds(289, 421, 231, 75);
 		contentPane.add(btnLembretes);
+		/*end[Lembretes]*/
 	}
 }

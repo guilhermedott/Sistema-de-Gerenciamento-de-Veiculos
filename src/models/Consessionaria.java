@@ -1,5 +1,5 @@
 package models;
-/*if[Consessionarias]*/
+
 public class Consessionaria {
     private String nomeCons;
     private String cnpjCons;
@@ -30,4 +30,3 @@ public class Consessionaria {
         return "Consessionaria {nomeCons='" + nomeCons + "', cnpjCons='" + cnpjCons + "'}";
     }
 }
-/*end[Consessionarias]*/

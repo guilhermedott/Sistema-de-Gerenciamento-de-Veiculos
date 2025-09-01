@@ -17,7 +17,7 @@
 				<feature name="Carros"/>
 				<feature name="Mecanicas"/>
 				<feature name="Seguradoras"/>
-				<feature name="Concessionarias"/>
+				<feature name="Consessionarias"/>
 				<feature name="Produtos"/>
 			</or>
 			<or abstract="true" mandatory="true" name="Validacao">
@@ -57,7 +57,7 @@
 		<rule>
 			<imp>
 				<disj>
-					<var>Concessionarias</var>
+					<var>Consessionarias</var>
 					<disj>
 						<var>Seguradoras</var>
 						<var>Mecanicas</var>

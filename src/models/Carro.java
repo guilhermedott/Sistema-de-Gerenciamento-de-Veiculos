@@ -1,5 +1,5 @@
 package models;
-/*if[Carros]*/
+
 public class Carro {
     private String modelo;
     private String chassis;
@@ -30,4 +30,3 @@ public class Carro {
         return "Carro {modelo='" + modelo + "', chassis='" + chassis + "'}";
     }
 }
-/*end[Carros]*/
