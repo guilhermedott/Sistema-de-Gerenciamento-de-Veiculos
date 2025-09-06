@@ -7,6 +7,8 @@ public class Pessoa {
     private String nome;
     private String cpf;
     private List<Carro> carros; // associação com a classe Carro
+    
+    public Pessoa() {}
 
     // Construtor
     public Pessoa(String nome, String cpf) {

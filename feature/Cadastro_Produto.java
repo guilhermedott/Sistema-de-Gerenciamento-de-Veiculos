@@ -1,10 +1,13 @@
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
-
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import models.Produto;
+import services.Validador;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
@@ -18,6 +21,7 @@ public class Cadastro_Produto extends JDialog {
 	private final JPanel contentPanel = new JPanel();
 	private JTextField txtFieldInputNomeProd;
 	private JTextField txtFieldInputSerialNumber;
+	Produto produto = new Produto();
 
 	/**
 	 * Launch the application.
@@ -70,14 +74,29 @@ public class Cadastro_Produto extends JDialog {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnEfetuarCadastro.setBounds(330, 342, 176, 48);
-		contentPanel.add(btnEfetuarCadastro);
 		
+		// cria o label já invisível
 		JLabel lblCadEfetuado = new JLabel("Cadastro efetuado!");
 		lblCadEfetuado.setForeground(Color.GREEN);
 		lblCadEfetuado.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		lblCadEfetuado.setBounds(300, 484, 258, 58);
+		lblCadEfetuado.setVisible(false);
 		contentPanel.add(lblCadEfetuado);
+
+		btnEfetuarCadastro.setBounds(330, 342, 176, 48);
+		btnEfetuarCadastro.addActionListener(new ActionListener() {
+		    @Override
+		    public void actionPerformed(ActionEvent e) {
+		        // Faz validação pra ver se está válido o número de série
+		        if (Validador.validarNumeroSerie(produto.getserialNumber())) {
+		            lblCadEfetuado.setVisible(true); // mostra se válido
+		        } else {
+		            lblCadEfetuado.setVisible(false); // esconde se inválido
+		        }
+		    }
+		});
+		contentPanel.add(btnEfetuarCadastro);
+
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));

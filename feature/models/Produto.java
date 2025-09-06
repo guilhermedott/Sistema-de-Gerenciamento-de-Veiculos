@@ -3,6 +3,9 @@ package models;
 public class Produto {
     private String produto;
     private String serialNumber;
+    
+    public Produto() {
+    }
 
     public Produto(String produto, String serialNumber) {
         this.produto = produto;

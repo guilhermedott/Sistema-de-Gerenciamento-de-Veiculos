@@ -3,6 +3,8 @@ package models;
 public class Seguradora {
     private String segNome;
     private String cnpjSeg;
+    
+    public Seguradora() {}
 
     public Seguradora(String segNome, String cnpjSeg) {
         this.segNome = segNome;

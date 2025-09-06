@@ -3,6 +3,8 @@ package models;
 public class Mecanica {
     private String nomeMec;
     private String cnpjMec;
+    
+    public Mecanica() {}
 
     public Mecanica(String nomeMec, String cnpjMec) {
         this.nomeMec = nomeMec;
