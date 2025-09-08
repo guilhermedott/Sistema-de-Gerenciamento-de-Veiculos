@@ -5,6 +5,10 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import models.Pessoa;
+import services.Validador;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
@@ -36,6 +40,7 @@ public class Cadastro_Pessoa extends JDialog {
 	 * Create the dialog.
 	 */
 	public Cadastro_Pessoa() {
+		Pessoa pessoa = new Pessoa();
 		setBounds(100, 100, 867, 667);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -70,14 +75,29 @@ public class Cadastro_Pessoa extends JDialog {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnEfetuarCadastro.setBounds(330, 342, 176, 48);
-		contentPanel.add(btnEfetuarCadastro);
 		
+		// cria o label já invisível
 		JLabel lblCadEfetuado = new JLabel("Cadastro efetuado!");
 		lblCadEfetuado.setForeground(Color.GREEN);
 		lblCadEfetuado.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		lblCadEfetuado.setBounds(300, 484, 258, 58);
+		lblCadEfetuado.setVisible(false);
 		contentPanel.add(lblCadEfetuado);
+
+		btnEfetuarCadastro.setBounds(330, 342, 176, 48);
+		btnEfetuarCadastro.addActionListener(new ActionListener() {
+		    @Override
+		    public void actionPerformed(ActionEvent e) {
+		        if (Validador.validarCPF(pessoa.getCpf())) {
+		            lblCadEfetuado.setVisible(true); // mostra se válido
+		        } else {
+		            lblCadEfetuado.setVisible(false); // esconde se inválido
+		        }
+		    }
+		});
+		contentPanel.add(btnEfetuarCadastro);
+
+		
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));

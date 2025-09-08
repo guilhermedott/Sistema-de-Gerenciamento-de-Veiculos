@@ -5,6 +5,10 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import models.Seguradora;
+import services.Validador;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
@@ -18,6 +22,7 @@ public class Cadastro_Seguradora extends JDialog {
 	private final JPanel contentPanel = new JPanel();
 	private JTextField txtFieldInputNomeSeg;
 	private JTextField txtFieldInputCNPJ;
+	Seguradora seguradora = new Seguradora();
 
 	/**
 	 * Launch the application.
@@ -70,14 +75,28 @@ public class Cadastro_Seguradora extends JDialog {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnEfetuarCadastro.setBounds(330, 342, 176, 48);
-		contentPanel.add(btnEfetuarCadastro);
 		
+		// cria o label já invisível
 		JLabel lblCadEfetuado = new JLabel("Cadastro efetuado!");
 		lblCadEfetuado.setForeground(Color.GREEN);
 		lblCadEfetuado.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		lblCadEfetuado.setBounds(300, 484, 258, 58);
+		lblCadEfetuado.setVisible(false);
 		contentPanel.add(lblCadEfetuado);
+
+		btnEfetuarCadastro.setBounds(330, 342, 176, 48);
+		btnEfetuarCadastro.addActionListener(new ActionListener() {
+		    @Override
+		    public void actionPerformed(ActionEvent e) {
+		        if (Validador.validarCNPJ(seguradora.getcnpjSeg())) {
+		            lblCadEfetuado.setVisible(true);  // mostra se válido
+		        } else {
+		            lblCadEfetuado.setVisible(false); // esconde se inválido
+		        }
+		    }
+		});
+		contentPanel.add(btnEfetuarCadastro);
+		
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));

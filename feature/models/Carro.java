@@ -3,7 +3,9 @@ package models;
 public class Carro {
     private String modelo;
     private String chassis;
-
+    
+    public Carro() {}
+    
     public Carro(String modelo, String chassis) {
         this.modelo = modelo;
         this.chassis = chassis;

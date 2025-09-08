@@ -3,6 +3,8 @@ package models;
 public class Consessionaria {
     private String nomeCons;
     private String cnpjCons;
+    
+    public Consessionaria() {}
 
     public Consessionaria(String nomeCons, String cnpjCons) {
         this.nomeCons = nomeCons;
