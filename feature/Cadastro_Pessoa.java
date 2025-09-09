@@ -91,10 +91,11 @@ public class Cadastro_Pessoa extends JDialog {
 		btnEfetuarCadastro.addActionListener(new ActionListener() {
 		    @Override
 		    public void actionPerformed(ActionEvent e) {
-		        if (Validador.validarCPF(pessoa.getCpf())) {
-		            lblCadEfetuado.setVisible(true); // mostra se válido
+		    	String cpfDigitado = txtFieldInputCPF.getText().trim();
+		        if (Validador.validarCPF(cpfDigitado)) {
+		            lblCadEfetuado.setVisible(true);
 		        } else {
-		            lblCadEfetuado.setVisible(false); // esconde se inválido
+		            lblCadEfetuado.setVisible(false);
 		        }
 		    }
 		});

@@ -91,10 +91,11 @@ public class Cadastro_Seguradora extends JDialog {
 		btnEfetuarCadastro.addActionListener(new ActionListener() {
 		    @Override
 		    public void actionPerformed(ActionEvent e) {
-		        if (Validador.validarCNPJ(seguradora.getcnpjSeg())) {
-		            lblCadEfetuado.setVisible(true);  // mostra se válido
+		    	String cnpjDigitadoSeg = txtFieldInputCNPJ.getText().trim();
+		        if (Validador.validarCNPJ(cnpjDigitadoSeg)) {
+		            lblCadEfetuado.setVisible(true);
 		        } else {
-		            lblCadEfetuado.setVisible(false); // esconde se inválido
+		            lblCadEfetuado.setVisible(false);
 		        }
 		    }
 		});

@@ -43,7 +43,6 @@ public class Cadastro_Mecanica extends JDialog {
 	 * Create the dialog.
 	 */
 	public Cadastro_Mecanica() {
-		Mecanica mecanica = new Mecanica();
 		setBounds(100, 100, 867, 667);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -90,10 +89,11 @@ public class Cadastro_Mecanica extends JDialog {
 		btnEfetuarCadastro.addActionListener(new ActionListener() {
 		    @Override
 		    public void actionPerformed(ActionEvent e) {
-		        if (Validador.validarCNPJ(mecanica.getcnpjMec())) {
-		            lblCadEfetuado.setVisible(true); // mostra
+		    	String cnpjDigitadoMec = txtFieldInputCNPJ.getText().trim();
+		        if (Validador.validarCNPJ(cnpjDigitadoMec)) {
+		            lblCadEfetuado.setVisible(true);
 		        } else {
-		            lblCadEfetuado.setVisible(false); // esconde
+		            lblCadEfetuado.setVisible(false);
 		        }
 		    }
 		});

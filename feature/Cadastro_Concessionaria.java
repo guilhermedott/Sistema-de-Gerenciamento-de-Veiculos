@@ -43,23 +43,22 @@ public class Cadastro_Concessionaria extends JDialog {
 	 * Create the dialog.
 	 */
 	public Cadastro_Concessionaria() {
-		Consessionaria consessionaria = new Consessionaria();
 		setBounds(100, 100, 867, 667);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		{
-			JLabel lblPgCadSeguradora = new JLabel("Cadastro da Seguradora");
+			JLabel lblPgCadSeguradora = new JLabel("Cadastro da Consessionaria");
 			lblPgCadSeguradora.setFont(new Font("Tahoma", Font.PLAIN, 40));
-			lblPgCadSeguradora.setBounds(214, 27, 430, 64);
+			lblPgCadSeguradora.setBounds(175, 28, 535, 64);
 			contentPanel.add(lblPgCadSeguradora);
 		}
 		
 		txtFieldInputNomeSeg = new JTextField();
 		txtFieldInputNomeSeg.setForeground(SystemColor.inactiveCaption);
 		txtFieldInputNomeSeg.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		txtFieldInputNomeSeg.setText("Digite o nome da Seguradora");
+		txtFieldInputNomeSeg.setText("Digite o nome da Consessionaria");
 		txtFieldInputNomeSeg.setBounds(240, 162, 361, 48);
 		contentPanel.add(txtFieldInputNomeSeg);
 		txtFieldInputNomeSeg.setColumns(10);
@@ -90,10 +89,11 @@ public class Cadastro_Concessionaria extends JDialog {
 		btnEfetuarCadastro.addActionListener(new ActionListener() {
 		    @Override
 		    public void actionPerformed(ActionEvent e) {
-		        if (Validador.validarCNPJ(consessionaria.getcnpjCons())) {
-		            lblCadEfetuado.setVisible(true); // mostra label
+		    	String cnpjDigitadoCons = txtFieldInputCNPJ.getText().trim();
+		        if (Validador.validarCNPJ(cnpjDigitadoCons)) {
+		            lblCadEfetuado.setVisible(true);
 		        } else {
-		            lblCadEfetuado.setVisible(false); // esconde se não validar
+		            lblCadEfetuado.setVisible(false);
 		        }
 		    }
 		});
