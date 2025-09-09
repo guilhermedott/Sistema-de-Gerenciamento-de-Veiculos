@@ -4,11 +4,15 @@ import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Window;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Lembretes extends JDialog {
+public class LembretesPF extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
 
@@ -17,7 +21,7 @@ public class Lembretes extends JDialog {
 	 */
 	public static void main(String[] args) {
 		try {
-			Lembretes dialog = new Lembretes();
+			LembretesPF dialog = new LembretesPF();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {
@@ -28,15 +32,22 @@ public class Lembretes extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public Lembretes() {
+	public LembretesPF() {
 		setBounds(100, 100, 871, 677);
 		getContentPane().setLayout(null);
 		contentPanel.setBounds(0, 0, 857, 609);
-		contentPanel.setLayout(new FlowLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel);
+		contentPanel.setLayout(null);
+		{
+			JLabel lblNewLabel = new JLabel("Seu carro estará disponível para retirada a partir das 16:10");
+			lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 27));
+			lblNewLabel.setBounds(73, 260, 715, 61);
+			contentPanel.add(lblNewLabel);
+		}
 		{
 			JLabel lblLembrete = new JLabel("Lembretes:");
+			lblLembrete.setBounds(277, 10, 250, 61);
 			lblLembrete.setFont(new Font("Tahoma", Font.PLAIN, 50));
 			contentPanel.add(lblLembrete);
 		}
@@ -46,17 +57,20 @@ public class Lembretes extends JDialog {
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane);
 			{
-				JButton okButton = new JButton("OK");
-				okButton.setActionCommand("OK");
-				buttonPane.add(okButton);
-				getRootPane().setDefaultButton(okButton);
-			}
-			{
-				JButton cancelButton = new JButton("Cancel");
+				JButton cancelButton = new JButton("Voltar");
 				cancelButton.setActionCommand("Cancel");
 				buttonPane.add(cancelButton);
+
+				
+				cancelButton.addActionListener(new ActionListener() {
+				    public void actionPerformed(ActionEvent e) {
+				        Window window = SwingUtilities.getWindowAncestor(cancelButton);
+				        if (window != null) {
+				            window.dispose();
+				        }
+				    }
+				});
 			}
 		}
 	}
-
 }
