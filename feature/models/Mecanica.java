@@ -1,5 +1,5 @@
 package models;
-/*if[Mecanicas]*/
+
 public class Mecanica {
     private String nomeMec;
     private String cnpjMec;
@@ -32,4 +32,3 @@ public class Mecanica {
         return "Mecanica {nomeMec='" + nomeMec + "', cnpjMec='" + cnpjMec + "'}";
     }
 }
-/*end[Mecanicas]*/

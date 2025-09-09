@@ -2,7 +2,7 @@ package models;
 
 import java.util.ArrayList;
 import java.util.List;
-/*if[Pessoas]*/
+
 public class Pessoa {
     private String nome;
     private String cpf;
@@ -57,4 +57,3 @@ public class Pessoa {
                 '}';
     }
 }
-/*end[Pessoas]*/

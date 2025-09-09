@@ -1,5 +1,5 @@
 package models;
-/*if[Seguradoras]*/
+
 public class Seguradora {
     private String segNome;
     private String cnpjSeg;
@@ -32,4 +32,3 @@ public class Seguradora {
         return "Seguradora {segNome='" + segNome + "', cnpjSeg='" + cnpjSeg + "'}";
     }
 }
-/*end[Seguradoras]*/
