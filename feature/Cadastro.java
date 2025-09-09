@@ -6,8 +6,10 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Window;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -47,6 +49,17 @@ public class Cadastro extends JDialog {
 				JButton cancelButton = new JButton("Voltar");
 				cancelButton.setActionCommand("Cancel");
 				buttonPane.add(cancelButton);
+
+				// Adicionando a ação para fechar a janela
+				cancelButton.addActionListener(new ActionListener() {
+				    public void actionPerformed(ActionEvent e) {
+				        // Pega a referência da janela a partir do botão
+				        Window window = SwingUtilities.getWindowAncestor(cancelButton);
+				        if (window != null) {
+				            window.dispose();
+				        }
+				    }
+				});
 			}
 		}
 		{

@@ -12,9 +12,12 @@ import services.Validador;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
+import java.awt.Window;
 import java.awt.Color;
 /*if[Consessionarias]*/
 public class Cadastro_Concessionaria extends JDialog {
@@ -102,9 +105,20 @@ public class Cadastro_Concessionaria extends JDialog {
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
-				JButton btnVoltar = new JButton("Voltar");
-				btnVoltar.setActionCommand("Cancel");
-				buttonPane.add(btnVoltar);
+				JButton cancelButton = new JButton("Voltar");
+				cancelButton.setActionCommand("Cancel");
+				buttonPane.add(cancelButton);
+
+				// Adicionando a ação para fechar a janela
+				cancelButton.addActionListener(new ActionListener() {
+				    public void actionPerformed(ActionEvent e) {
+				        // Pega a referência da janela a partir do botão
+				        Window window = SwingUtilities.getWindowAncestor(cancelButton);
+				        if (window != null) {
+				            window.dispose();
+				        }
+				    }
+				});
 			}
 		}
 	}
