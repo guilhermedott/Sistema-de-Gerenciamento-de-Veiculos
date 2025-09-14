@@ -15,6 +15,8 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
 import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import java.awt.Window;
@@ -63,6 +65,20 @@ public class Cadastro_Seguradora extends JDialog {
 		txtFieldInputNomeSeg.setBounds(240, 162, 361, 48);
 		contentPanel.add(txtFieldInputNomeSeg);
 		txtFieldInputNomeSeg.setColumns(10);
+		txtFieldInputNomeSeg.addFocusListener(new FocusAdapter() {
+			   public void focusGained(FocusEvent e) {
+	                if (Validador.VerificaFocoCampo(txtFieldInputNomeSeg.getText())) {
+	                	txtFieldInputNomeSeg.setText("");
+	                }
+	            }
+
+	            @Override
+	            public void focusLost(FocusEvent e) {
+	                if (txtFieldInputNomeSeg.getText().isBlank()) {
+	                	txtFieldInputNomeSeg.setText("Digite o Número de SDigite o nome da Seguradoraérie");
+	                }
+	            }
+		});
 		
 		txtFieldInputCNPJ = new JTextField();
 		txtFieldInputCNPJ.setFont(new Font("Tahoma", Font.PLAIN, 25));
@@ -71,6 +87,20 @@ public class Cadastro_Seguradora extends JDialog {
 		txtFieldInputCNPJ.setColumns(10);
 		txtFieldInputCNPJ.setBounds(240, 257, 361, 48);
 		contentPanel.add(txtFieldInputCNPJ);
+		txtFieldInputCNPJ.addFocusListener(new FocusAdapter() {
+			   public void focusGained(FocusEvent e) {
+	                if (Validador.VerificaFocoCampo(txtFieldInputCNPJ.getText())) {
+	                	txtFieldInputCNPJ.setText("");
+	                }
+	            }
+
+	            @Override
+	            public void focusLost(FocusEvent e) {
+	                if (txtFieldInputCNPJ.getText().isBlank()) {
+	                	txtFieldInputCNPJ.setText("Digite o CNPJ");
+	                }
+	            }
+		});
 		
 		JButton btnEfetuarCadastro = new JButton("Cadastrar");
 		btnEfetuarCadastro.setFont(new Font("Tahoma", Font.PLAIN, 25));
@@ -100,6 +130,16 @@ public class Cadastro_Seguradora extends JDialog {
 		    }
 		});
 		contentPanel.add(btnEfetuarCadastro);
+		
+		JLabel lblNomeSeguradora = new JLabel("Nome da Seguradora");
+		lblNomeSeguradora.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblNomeSeguradora.setBounds(240, 123, 361, 38);
+		contentPanel.add(lblNomeSeguradora);
+		
+		JLabel lblCnpj = new JLabel("CNPJ");
+		lblCnpj.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblCnpj.setBounds(240, 221, 361, 38);
+		contentPanel.add(lblCnpj);
 		
 		{
 			JPanel buttonPane = new JPanel();

@@ -15,6 +15,8 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
 import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import java.awt.Window;
@@ -63,6 +65,20 @@ public class Cadastro_Pessoa extends JDialog {
 		txtFieldInputNome.setBounds(240, 162, 361, 48);
 		contentPanel.add(txtFieldInputNome);
 		txtFieldInputNome.setColumns(10);
+		txtFieldInputNome.addFocusListener(new FocusAdapter() {
+			   public void focusGained(FocusEvent e) {
+	                if (Validador.VerificaFocoCampo(txtFieldInputNome.getText())) {
+	                	txtFieldInputNome.setText("");
+	                }
+	            }
+
+	            @Override
+	            public void focusLost(FocusEvent e) {
+	                if (txtFieldInputNome.getText().isBlank()) {
+	                	txtFieldInputNome.setText("Digite seu nome");
+	                }
+	            }
+		});
 		
 		txtFieldInputCPF = new JTextField();
 		txtFieldInputCPF.setFont(new Font("Tahoma", Font.PLAIN, 25));
@@ -71,6 +87,20 @@ public class Cadastro_Pessoa extends JDialog {
 		txtFieldInputCPF.setColumns(10);
 		txtFieldInputCPF.setBounds(240, 257, 361, 48);
 		contentPanel.add(txtFieldInputCPF);
+		txtFieldInputCPF.addFocusListener(new FocusAdapter() {
+			   public void focusGained(FocusEvent e) {
+	                if (Validador.VerificaFocoCampo(txtFieldInputCPF.getText())) {
+	                	txtFieldInputCPF.setText("");
+	                }
+	            }
+
+	            @Override
+	            public void focusLost(FocusEvent e) {
+	                if (txtFieldInputCPF.getText().isBlank()) {
+	                	txtFieldInputCPF.setText("Digite seu CPF");
+	                }
+	            }
+		});
 		
 		JButton btnEfetuarCadastro = new JButton("Cadastrar");
 		btnEfetuarCadastro.setFont(new Font("Tahoma", Font.PLAIN, 25));
@@ -100,6 +130,16 @@ public class Cadastro_Pessoa extends JDialog {
 		    }
 		});
 		contentPanel.add(btnEfetuarCadastro);
+		
+		JLabel lblNome = new JLabel("Nome");
+		lblNome.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblNome.setBounds(240, 114, 361, 48);
+		contentPanel.add(lblNome);
+		
+		JLabel lblCpf = new JLabel("CPF");
+		lblCpf.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblCpf.setBounds(240, 208, 361, 48);
+		contentPanel.add(lblCpf);
 
 		
 		{

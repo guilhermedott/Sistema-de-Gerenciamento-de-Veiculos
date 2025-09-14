@@ -3,6 +3,10 @@ package services;
 public class Validador {
 	/*if[CPF]*/
     public static boolean validarCPF(String cpf) {
+    	 // Remove caracteres não numéricos
+    		 cpf = cpf.replaceAll("\\D", "");
+
+        // Verifica se tem 11 dígitos
         if (cpf.length() != 11) {
             return false;
         }
@@ -75,4 +79,18 @@ public class Validador {
         return true;
     }
     /*end[Numero de Serie]*/
+
+    
+    public static boolean VerificaFocoCampo(String campo) {
+    	
+    	if(campo.contains("Digite"))
+    	{
+    		return true;
+    	}
+    	else {
+    		return false;
+    	}
+    	
+    }
+    
 }

@@ -15,6 +15,8 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
 import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import java.awt.Window;
@@ -62,6 +64,20 @@ public class Cadastro_Mecanica extends JDialog {
 		txtFieldInputNomeMec.setBounds(240, 162, 361, 48);
 		contentPanel.add(txtFieldInputNomeMec);
 		txtFieldInputNomeMec.setColumns(10);
+		txtFieldInputNomeMec.addFocusListener(new FocusAdapter() {
+			   public void focusGained(FocusEvent e) {
+	                if (Validador.VerificaFocoCampo(txtFieldInputNomeMec.getText())) {
+	                	txtFieldInputNomeMec.setText("");
+	                }
+	            }
+
+	            @Override
+	            public void focusLost(FocusEvent e) {
+	                if (txtFieldInputNomeMec.getText().isBlank()) {
+	                	txtFieldInputNomeMec.setText("Digite o nome da Mecânica");
+	                }
+	            }
+		});
 		
 		txtFieldInputCNPJ = new JTextField();
 		txtFieldInputCNPJ.setFont(new Font("Tahoma", Font.PLAIN, 25));
@@ -70,6 +86,20 @@ public class Cadastro_Mecanica extends JDialog {
 		txtFieldInputCNPJ.setColumns(10);
 		txtFieldInputCNPJ.setBounds(240, 257, 361, 48);
 		contentPanel.add(txtFieldInputCNPJ);
+		txtFieldInputCNPJ.addFocusListener(new FocusAdapter() {
+			   public void focusGained(FocusEvent e) {
+	                if (Validador.VerificaFocoCampo(txtFieldInputCNPJ.getText())) {
+	                	txtFieldInputCNPJ.setText("");
+	                }
+	            }
+
+	            @Override
+	            public void focusLost(FocusEvent e) {
+	                if (txtFieldInputCNPJ.getText().isBlank()) {
+	                	txtFieldInputCNPJ.setText("Digite o nome da Mecânica");
+	                }
+	            }
+		});
 		
 		JButton btnEfetuarCadastro = new JButton("Cadastrar");
 		btnEfetuarCadastro.setFont(new Font("Tahoma", Font.PLAIN, 25));
@@ -98,6 +128,16 @@ public class Cadastro_Mecanica extends JDialog {
 		    }
 		});
 		contentPanel.add(btnEfetuarCadastro);
+		
+		JLabel lblNomeMecanica = new JLabel("Nome da Mecânica");
+		lblNomeMecanica.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblNomeMecanica.setBounds(240, 119, 361, 41);
+		contentPanel.add(lblNomeMecanica);
+		
+		JLabel lblCnpjMecanica = new JLabel("CNPJ");
+		lblCnpjMecanica.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblCnpjMecanica.setBounds(241, 216, 361, 41);
+		contentPanel.add(lblCnpjMecanica);
 
 		
 		{

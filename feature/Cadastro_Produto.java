@@ -14,6 +14,8 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
 import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import java.awt.Window;
@@ -62,6 +64,20 @@ public class Cadastro_Produto extends JDialog {
 		txtFieldInputNomeProd.setBounds(240, 162, 361, 48);
 		contentPanel.add(txtFieldInputNomeProd);
 		txtFieldInputNomeProd.setColumns(10);
+		txtFieldInputNomeProd.addFocusListener(new FocusAdapter() {
+			   public void focusGained(FocusEvent e) {
+	                if (Validador.VerificaFocoCampo(txtFieldInputNomeProd.getText())) {
+	                	txtFieldInputNomeProd.setText("");
+	                }
+	            }
+
+	            @Override
+	            public void focusLost(FocusEvent e) {
+	                if (txtFieldInputNomeProd.getText().isBlank()) {
+	                	txtFieldInputNomeProd.setText("Digite o nome do Produto");
+	                }
+	            }
+		});
 		
 		txtFieldInputSerialNumber = new JTextField();
 		txtFieldInputSerialNumber.setFont(new Font("Tahoma", Font.PLAIN, 25));
@@ -70,6 +86,20 @@ public class Cadastro_Produto extends JDialog {
 		txtFieldInputSerialNumber.setColumns(10);
 		txtFieldInputSerialNumber.setBounds(240, 257, 361, 48);
 		contentPanel.add(txtFieldInputSerialNumber);
+		txtFieldInputSerialNumber.addFocusListener(new FocusAdapter() {
+			   public void focusGained(FocusEvent e) {
+	                if (Validador.VerificaFocoCampo(txtFieldInputSerialNumber.getText())) {
+	                	txtFieldInputSerialNumber.setText("");
+	                }
+	            }
+
+	            @Override
+	            public void focusLost(FocusEvent e) {
+	                if (txtFieldInputSerialNumber.getText().isBlank()) {
+	                	txtFieldInputSerialNumber.setText("Digite o Número de Série");
+	                }
+	            }
+		});
 		
 		JButton btnEfetuarCadastro = new JButton("Cadastrar");
 		btnEfetuarCadastro.setFont(new Font("Tahoma", Font.PLAIN, 25));
@@ -99,6 +129,16 @@ public class Cadastro_Produto extends JDialog {
 		    }
 		});
 		contentPanel.add(btnEfetuarCadastro);
+		
+		JLabel lblNomeProduto = new JLabel("Nome do Produto");
+		lblNomeProduto.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblNomeProduto.setBounds(238, 120, 365, 41);
+		contentPanel.add(lblNomeProduto);
+		
+		JLabel lblNumeroDeSrie = new JLabel("Numero de Série");
+		lblNumeroDeSrie.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblNumeroDeSrie.setBounds(238, 221, 365, 41);
+		contentPanel.add(lblNumeroDeSrie);
 
 		{
 			JPanel buttonPane = new JPanel();
