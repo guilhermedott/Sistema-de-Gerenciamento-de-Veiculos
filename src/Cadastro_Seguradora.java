@@ -21,7 +21,7 @@ import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import java.awt.Window;
 import java.awt.Color;
-/*if[Seguradoras]*/
+
 public class Cadastro_Seguradora extends JDialog {
 
 	private static final long serialVersionUID = 770440111214611527L;
@@ -165,4 +165,3 @@ public class Cadastro_Seguradora extends JDialog {
 		}
 	}
 }
-/*end[Seguradoras]*/

@@ -6,7 +6,6 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import models.Mecanica;
 import services.Validador;
 
 import javax.swing.JLabel;
@@ -24,6 +23,7 @@ import java.awt.Color;
 /*if[Mecanicas]*/
 public class Cadastro_Mecanica extends JDialog {
 
+	private static final long serialVersionUID = -4186072690676280232L;
 	private final JPanel contentPanel = new JPanel();
 	private JTextField txtFieldInputNomeMec;
 	private JTextField txtFieldInputCNPJ;

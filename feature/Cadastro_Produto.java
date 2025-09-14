@@ -23,6 +23,7 @@ import java.awt.Color;
 /*if[Produtos]*/
 public class Cadastro_Produto extends JDialog {
 
+	private static final long serialVersionUID = -6776975782784903335L;
 	private final JPanel contentPanel = new JPanel();
 	private JTextField txtFieldInputNomeProd;
 	private JTextField txtFieldInputSerialNumber;

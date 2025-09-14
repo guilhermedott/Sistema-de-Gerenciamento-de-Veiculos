@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Sistema de Gerenciamento de Veiculos</name>
-	<comment></comment>
+	<name>Sistema-de-Gerenciamento-de-Veiculos</name>
+	<comment>
+	[description]
+	This is a simple hello world application for Munge.
+	[/description]
+	</comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -14,7 +18,7 @@
 				</dictionary>
 				<dictionary>
 					<key>composer</key>
-					<value>de.ovgu.featureide.core.FeatureModeling</value>
+					<value>de.ovgu.featureide.preprocessor.munge</value>
 				</dictionary>
 				<dictionary>
 					<key>equations</key>
@@ -22,7 +26,7 @@
 				</dictionary>
 				<dictionary>
 					<key>source</key>
-					<value>features</value>
+					<value>feature</value>
 				</dictionary>
 			</arguments>
 		</buildCommand>
@@ -33,7 +37,7 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>de.ovgu.featureide.core.featureProjectNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>de.ovgu.featureide.core.featureProjectNature</nature>
 	</natures>
 </projectDescription>

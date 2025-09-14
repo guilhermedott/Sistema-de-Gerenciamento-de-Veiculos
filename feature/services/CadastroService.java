@@ -57,7 +57,7 @@ public class CadastroService {
     }
     /*end[Carros]*/
     
-    /*if[Consessionaria]*/
+    /*if[Consessionarias]*/
     public void cadastrarConsessionaria(Consessionaria consessionaria) {
         if (Validador.validarCNPJ(consessionaria.getcnpjCons())) {
             consessionarias.add(consessionaria);
@@ -69,7 +69,7 @@ public class CadastroService {
     public List<Consessionaria> listarConsessionarias() {
         return consessionarias;
     }
-    /*end[Consessionaria]*/
+    /*end[Consessionarias]*/
     
     /*if[Produtos]*/
     public void cadastrarProduto(Produto produto) {

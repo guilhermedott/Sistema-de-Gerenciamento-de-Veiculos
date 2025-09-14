@@ -22,10 +22,11 @@ import java.awt.SystemColor;
 import java.awt.Window;
 import java.awt.Color;
 import javax.swing.JFormattedTextField;
-import javax.swing.JTextArea;
+
 /*if[Carros]*/
 public class Cadastro_Carro extends JDialog {
 
+	private static final long serialVersionUID = -7537696676531178169L;
 	private final JPanel contentPanel = new JPanel();
 	private JFormattedTextField txtFieldInputModeloCarro;
 	private JTextField txtFieldInputChassis;

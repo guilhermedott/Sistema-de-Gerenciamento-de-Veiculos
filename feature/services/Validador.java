@@ -74,11 +74,11 @@ public class Validador {
         return true;
     }
     /*end[Chassis]*/
-    /*if[Numero de Serie]*/
+    /*if[NumerodeSerie]*/
     public static boolean validarNumeroSerie(String numero) {
         return true;
     }
-    /*end[Numero de Serie]*/
+    /*end[NumerodeSerie]*/
 
     
     public static boolean VerificaFocoCampo(String campo) {

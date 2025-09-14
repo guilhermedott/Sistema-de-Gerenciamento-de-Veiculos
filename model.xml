@@ -1,45 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-model href=""?>
 <featureModel>
 	<properties>
-		<graphics key="autolayoutconstraints" value="false" />
-		<graphics key="legendautolayout" value="true" />
-		<graphics key="showconstraints" value="true" />
-		<graphics key="showshortnames" value="false" />
-		<graphics key="layout" value="horizontal" />
-		<graphics key="showcollapsedconstraints" value="true" />
-		<graphics key="legendhidden" value="false" />
-		<graphics key="layoutalgorithm" value="1" />
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showconstraints" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
 	</properties>
 	<struct>
-		<and abstract="true" mandatory="true"
-			name="SistemadeGerenciamentodeVeiculos">
+		<and abstract="true" mandatory="true" name="SistemadeGerenciamentodeVeiculos">
 			<or abstract="true" mandatory="true" name="Cadastro">
-				<feature name="Pessoas" />
-				<feature name="Carros" />
-				<feature name="Mecanicas" />
-				<feature name="Seguradoras" />
-				<feature name="Consessionarias" />
-				<feature name="Produtos" />
+				<feature name="Pessoas"/>
+				<feature name="Carros"/>
+				<feature name="Mecanicas"/>
+				<feature name="Seguradoras"/>
+				<feature name="Consessionarias"/>
+				<feature name="Produtos"/>
 			</or>
 			<or abstract="true" mandatory="true" name="Validacao">
-				<feature name="CPF" />
-				<feature name="CNPJ" />
-				<feature name="Chassis" />
-				<feature name="Numero de Serie" />
+				<feature name="CPF"/>
+				<feature name="CNPJ"/>
+				<feature name="Chassis"/>
+				<feature name="NumerodeSerie"/>
 			</or>
 			<and abstract="true" name="Relatorio">
-				<feature name="Seguros" />
-				<feature name="Danos" />
-				<feature name="Donos" />
-				<feature name="Manutencoes" />
-				<feature name="Info. Gerais" />
+				<feature name="Seguros"/>
+				<feature name="Danos"/>
+				<feature name="Donos"/>
+				<feature name="Manutencoes"/>
+				<feature name="InfoGerais"/>
 			</and>
 			<or abstract="true" name="Lembretes">
-				<feature name="Troca de Componentes" />
-				<feature name="Revisoes" />
-				<feature name="Prazos" />
-				<feature name="Andamento de Processos" />
+				<feature name="TrocadeComponentes"/>
+				<feature name="Revisoes"/>
+				<feature name="Prazos"/>
+				<feature name="AndamentodeProcessos"/>
 			</or>
 		</and>
 	</struct>

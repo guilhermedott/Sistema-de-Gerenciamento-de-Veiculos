@@ -6,7 +6,6 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import models.Consessionaria;
 import services.Validador;
 
 import javax.swing.JLabel;
@@ -24,6 +23,7 @@ import java.awt.Color;
 /*if[Consessionarias]*/
 public class Cadastro_Concessionaria extends JDialog {
 
+	private static final long serialVersionUID = -1550721018967810673L;
 	private final JPanel contentPanel = new JPanel();
 	private JTextField txtFieldInputNomeSeg;
 	private JTextField txtFieldInputCNPJ;

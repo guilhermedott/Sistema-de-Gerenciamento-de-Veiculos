@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <configuration>
-	<feature automatic="selected" name="SistemadeGerenciamentodeVeiculos" />
-	<feature automatic="selected" name="Cadastro" />
-	<feature name="Pessoas" />
-	<feature name="Carros" />
-	<feature manual="selected" name="Mecanicas" />
-	<feature name="Seguradoras" />
-	<feature name="Consessionarias" />
-	<feature manual="selected" name="Produtos" />
-	<feature automatic="selected" name="Validacao" />
-	<feature name="CPF" />
-	<feature automatic="selected" manual="selected" name="CNPJ" />
-	<feature name="Chassis" />
-	<feature name="Numero de Serie" />
-	<feature automatic="selected" name="Relatorio" />
-	<feature manual="selected" name="Seguros" />
-	<feature name="Danos" />
-	<feature name="Donos" />
-	<feature manual="selected" name="Manutencoes" />
-	<feature manual="selected" name="Info. Gerais" />
-	<feature automatic="selected" name="Lembretes" />
-	<feature name="Troca de Componentes" />
-	<feature name="Revisoes" />
-	<feature manual="selected" name="Prazos" />
-	<feature manual="selected" name="Andamento de Processos" />
+	<feature automatic="selected" name="SistemadeGerenciamentodeVeiculos"/>
+	<feature automatic="selected" name="Cadastro"/>
+	<feature name="Pessoas"/>
+	<feature name="Carros"/>
+	<feature manual="selected" name="Mecanicas"/>
+	<feature name="Seguradoras"/>
+	<feature name="Consessionarias"/>
+	<feature manual="selected" name="Produtos"/>
+	<feature automatic="selected" name="Validacao"/>
+	<feature name="CPF"/>
+	<feature automatic="selected" manual="selected" name="CNPJ"/>
+	<feature name="Chassis"/>
+	<feature name="NumerodeSerie"/>
+	<feature automatic="selected" name="Relatorio"/>
+	<feature manual="selected" name="Seguros"/>
+	<feature name="Danos"/>
+	<feature name="Donos"/>
+	<feature manual="selected" name="Manutencoes"/>
+	<feature name="InfoGerais"/>
+	<feature automatic="selected" name="Lembretes"/>
+	<feature name="TrocadeComponentes"/>
+	<feature name="Revisoes"/>
+	<feature manual="selected" name="Prazos"/>
+	<feature name="AndamentodeProcessos"/>
 </configuration>

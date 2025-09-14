@@ -1,11 +1,10 @@
-import java.awt.BorderLayout;
+
 import java.awt.FlowLayout;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -15,6 +14,7 @@ import java.awt.event.ActionEvent;
 
 public class Cadastro extends JDialog {
 
+	private static final long serialVersionUID = 6104131923519581320L;
 	private final JPanel contentPanel = new JPanel();
 
 	/**

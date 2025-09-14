@@ -6,7 +6,7 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import models.Pessoa;
+//import models.Pessoa;
 import services.Validador;
 
 import javax.swing.JLabel;
@@ -24,6 +24,7 @@ import java.awt.Color;
 /*if[Pessoas]*/
 public class Cadastro_Pessoa extends JDialog {
 
+	private static final long serialVersionUID = -5675671922089305039L;
 	private final JPanel contentPanel = new JPanel();
 	private JTextField txtFieldInputNome;
 	private JTextField txtFieldInputCPF;
@@ -45,7 +46,7 @@ public class Cadastro_Pessoa extends JDialog {
 	 * Create the dialog.
 	 */
 	public Cadastro_Pessoa() {
-		Pessoa pessoa = new Pessoa();
+		//Pessoa pessoa = new Pessoa();
 		setBounds(100, 100, 867, 667);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
