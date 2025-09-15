@@ -1,12 +1,12 @@
+package feature;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
-
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import models.Seguradora;
+import models.Produto;
 import services.Validador;
 
 import javax.swing.JLabel;
@@ -21,21 +21,21 @@ import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import java.awt.Window;
 import java.awt.Color;
-/*if[Seguradoras]*/
-public class Cadastro_Seguradora extends JDialog {
+/*if[Produtos]*/
+public class Cadastro_Produto extends JDialog {
 
-	private static final long serialVersionUID = 770440111214611527L;
+	private static final long serialVersionUID = -6776975782784903335L;
 	private final JPanel contentPanel = new JPanel();
-	private JTextField txtFieldInputNomeSeg;
-	private JTextField txtFieldInputCNPJ;
-	Seguradora seguradora = new Seguradora();
+	private JTextField txtFieldInputNomeProd;
+	private JTextField txtFieldInputSerialNumber;
+	Produto produto = new Produto();
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
 		try {
-			Cadastro_Seguradora dialog = new Cadastro_Seguradora();
+			Cadastro_Produto dialog = new Cadastro_Produto();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {
@@ -46,59 +46,59 @@ public class Cadastro_Seguradora extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public Cadastro_Seguradora() {
+	public Cadastro_Produto() {
 		setBounds(100, 100, 867, 667);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		{
-			JLabel lblPgCadSeguradora = new JLabel("Cadastro da Seguradora");
-			lblPgCadSeguradora.setFont(new Font("Tahoma", Font.PLAIN, 40));
-			lblPgCadSeguradora.setBounds(214, 27, 430, 64);
-			contentPanel.add(lblPgCadSeguradora);
+			JLabel lblPgCadProduto = new JLabel("Cadastro de Produto");
+			lblPgCadProduto.setFont(new Font("Tahoma", Font.PLAIN, 40));
+			lblPgCadProduto.setBounds(238, 27, 365, 64);
+			contentPanel.add(lblPgCadProduto);
 		}
 		
-		txtFieldInputNomeSeg = new JTextField();
-		txtFieldInputNomeSeg.setForeground(SystemColor.inactiveCaption);
-		txtFieldInputNomeSeg.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		txtFieldInputNomeSeg.setText("Digite o nome da Seguradora");
-		txtFieldInputNomeSeg.setBounds(240, 162, 361, 48);
-		contentPanel.add(txtFieldInputNomeSeg);
-		txtFieldInputNomeSeg.setColumns(10);
-		txtFieldInputNomeSeg.addFocusListener(new FocusAdapter() {
+		txtFieldInputNomeProd = new JTextField();
+		txtFieldInputNomeProd.setForeground(SystemColor.inactiveCaption);
+		txtFieldInputNomeProd.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		txtFieldInputNomeProd.setText("Digite o nome do Produto");
+		txtFieldInputNomeProd.setBounds(240, 162, 361, 48);
+		contentPanel.add(txtFieldInputNomeProd);
+		txtFieldInputNomeProd.setColumns(10);
+		txtFieldInputNomeProd.addFocusListener(new FocusAdapter() {
 			   public void focusGained(FocusEvent e) {
-	                if (Validador.VerificaFocoCampo(txtFieldInputNomeSeg.getText())) {
-	                	txtFieldInputNomeSeg.setText("");
+	                if (Validador.VerificaFocoCampo(txtFieldInputNomeProd.getText())) {
+	                	txtFieldInputNomeProd.setText("");
 	                }
 	            }
 
 	            @Override
 	            public void focusLost(FocusEvent e) {
-	                if (txtFieldInputNomeSeg.getText().isBlank()) {
-	                	txtFieldInputNomeSeg.setText("Digite o Número de SDigite o nome da Seguradoraérie");
+	                if (txtFieldInputNomeProd.getText().isBlank()) {
+	                	txtFieldInputNomeProd.setText("Digite o nome do Produto");
 	                }
 	            }
 		});
 		
-		txtFieldInputCNPJ = new JTextField();
-		txtFieldInputCNPJ.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		txtFieldInputCNPJ.setForeground(SystemColor.inactiveCaption);
-		txtFieldInputCNPJ.setText("Digite o CNPJ");
-		txtFieldInputCNPJ.setColumns(10);
-		txtFieldInputCNPJ.setBounds(240, 257, 361, 48);
-		contentPanel.add(txtFieldInputCNPJ);
-		txtFieldInputCNPJ.addFocusListener(new FocusAdapter() {
+		txtFieldInputSerialNumber = new JTextField();
+		txtFieldInputSerialNumber.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		txtFieldInputSerialNumber.setForeground(SystemColor.inactiveCaption);
+		txtFieldInputSerialNumber.setText("Digite o Número de Série");
+		txtFieldInputSerialNumber.setColumns(10);
+		txtFieldInputSerialNumber.setBounds(240, 257, 361, 48);
+		contentPanel.add(txtFieldInputSerialNumber);
+		txtFieldInputSerialNumber.addFocusListener(new FocusAdapter() {
 			   public void focusGained(FocusEvent e) {
-	                if (Validador.VerificaFocoCampo(txtFieldInputCNPJ.getText())) {
-	                	txtFieldInputCNPJ.setText("");
+	                if (Validador.VerificaFocoCampo(txtFieldInputSerialNumber.getText())) {
+	                	txtFieldInputSerialNumber.setText("");
 	                }
 	            }
 
 	            @Override
 	            public void focusLost(FocusEvent e) {
-	                if (txtFieldInputCNPJ.getText().isBlank()) {
-	                	txtFieldInputCNPJ.setText("Digite o CNPJ");
+	                if (txtFieldInputSerialNumber.getText().isBlank()) {
+	                	txtFieldInputSerialNumber.setText("Digite o Número de Série");
 	                }
 	            }
 		});
@@ -122,26 +122,26 @@ public class Cadastro_Seguradora extends JDialog {
 		btnEfetuarCadastro.addActionListener(new ActionListener() {
 		    @Override
 		    public void actionPerformed(ActionEvent e) {
-		    	String cnpjDigitadoSeg = txtFieldInputCNPJ.getText().trim();
-		        if (Validador.validarCNPJ(cnpjDigitadoSeg)) {
-		            lblCadEfetuado.setVisible(true);
+		        // Faz validação pra ver se está válido o número de série
+		        if (Validador.validarNumeroSerie(produto.getserialNumber())) {
+		            lblCadEfetuado.setVisible(true); // mostra se válido
 		        } else {
-		            lblCadEfetuado.setVisible(false);
+		            lblCadEfetuado.setVisible(false); // esconde se inválido
 		        }
 		    }
 		});
 		contentPanel.add(btnEfetuarCadastro);
 		
-		JLabel lblNomeSeguradora = new JLabel("Nome da Seguradora");
-		lblNomeSeguradora.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		lblNomeSeguradora.setBounds(240, 123, 361, 38);
-		contentPanel.add(lblNomeSeguradora);
+		JLabel lblNomeProduto = new JLabel("Nome do Produto");
+		lblNomeProduto.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblNomeProduto.setBounds(238, 120, 365, 41);
+		contentPanel.add(lblNomeProduto);
 		
-		JLabel lblCnpj = new JLabel("CNPJ");
-		lblCnpj.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		lblCnpj.setBounds(240, 221, 361, 38);
-		contentPanel.add(lblCnpj);
-		
+		JLabel lblNumeroDeSrie = new JLabel("Numero de Série");
+		lblNumeroDeSrie.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblNumeroDeSrie.setBounds(238, 221, 365, 41);
+		contentPanel.add(lblNumeroDeSrie);
+
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
@@ -165,4 +165,4 @@ public class Cadastro_Seguradora extends JDialog {
 		}
 	}
 }
-/*end[Seguradoras]*/
+/*end[Produtos]*/

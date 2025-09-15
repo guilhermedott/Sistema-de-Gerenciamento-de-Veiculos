@@ -1,3 +1,4 @@
+package feature;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 
@@ -6,6 +7,7 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import models.Seguradora;
 import services.Validador;
 
 import javax.swing.JLabel;
@@ -20,6 +22,7 @@ import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import java.awt.Window;
 import java.awt.Color;
+
 
 
 

@@ -1,3 +1,4 @@
+package feature;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 
@@ -6,7 +7,6 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-//import models.Pessoa;
 import services.Validador;
 
 import javax.swing.JLabel;
@@ -21,20 +21,20 @@ import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import java.awt.Window;
 import java.awt.Color;
-/*if[Pessoas]*/
-public class Cadastro_Pessoa extends JDialog {
+/*if[Mecanicas]*/
+public class Cadastro_Mecanica extends JDialog {
 
-	private static final long serialVersionUID = -5675671922089305039L;
+	private static final long serialVersionUID = -4186072690676280232L;
 	private final JPanel contentPanel = new JPanel();
-	private JTextField txtFieldInputNome;
-	private JTextField txtFieldInputCPF;
+	private JTextField txtFieldInputNomeMec;
+	private JTextField txtFieldInputCNPJ;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
 		try {
-			Cadastro_Pessoa dialog = new Cadastro_Pessoa();
+			Cadastro_Mecanica dialog = new Cadastro_Mecanica();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {
@@ -45,60 +45,59 @@ public class Cadastro_Pessoa extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public Cadastro_Pessoa() {
-		//Pessoa pessoa = new Pessoa();
+	public Cadastro_Mecanica() {
 		setBounds(100, 100, 867, 667);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		{
-			JLabel lblPgCadPessoal = new JLabel("Cadastro pessoal");
-			lblPgCadPessoal.setFont(new Font("Tahoma", Font.PLAIN, 40));
-			lblPgCadPessoal.setBounds(272, 25, 309, 64);
-			contentPanel.add(lblPgCadPessoal);
+			JLabel lblPgCadMecanica = new JLabel("Cadastro da Mecânica");
+			lblPgCadMecanica.setFont(new Font("Tahoma", Font.PLAIN, 40));
+			lblPgCadMecanica.setBounds(236, 28, 393, 64);
+			contentPanel.add(lblPgCadMecanica);
 		}
 		
-		txtFieldInputNome = new JTextField();
-		txtFieldInputNome.setForeground(SystemColor.inactiveCaption);
-		txtFieldInputNome.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		txtFieldInputNome.setText("Digite seu nome");
-		txtFieldInputNome.setBounds(240, 162, 361, 48);
-		contentPanel.add(txtFieldInputNome);
-		txtFieldInputNome.setColumns(10);
-		txtFieldInputNome.addFocusListener(new FocusAdapter() {
+		txtFieldInputNomeMec = new JTextField();
+		txtFieldInputNomeMec.setForeground(SystemColor.inactiveCaption);
+		txtFieldInputNomeMec.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		txtFieldInputNomeMec.setText("Digite o nome da Mecânica");
+		txtFieldInputNomeMec.setBounds(240, 162, 361, 48);
+		contentPanel.add(txtFieldInputNomeMec);
+		txtFieldInputNomeMec.setColumns(10);
+		txtFieldInputNomeMec.addFocusListener(new FocusAdapter() {
 			   public void focusGained(FocusEvent e) {
-	                if (Validador.VerificaFocoCampo(txtFieldInputNome.getText())) {
-	                	txtFieldInputNome.setText("");
+	                if (Validador.VerificaFocoCampo(txtFieldInputNomeMec.getText())) {
+	                	txtFieldInputNomeMec.setText("");
 	                }
 	            }
 
 	            @Override
 	            public void focusLost(FocusEvent e) {
-	                if (txtFieldInputNome.getText().isBlank()) {
-	                	txtFieldInputNome.setText("Digite seu nome");
+	                if (txtFieldInputNomeMec.getText().isBlank()) {
+	                	txtFieldInputNomeMec.setText("Digite o nome da Mecânica");
 	                }
 	            }
 		});
 		
-		txtFieldInputCPF = new JTextField();
-		txtFieldInputCPF.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		txtFieldInputCPF.setForeground(SystemColor.inactiveCaption);
-		txtFieldInputCPF.setText("Digite seu CPF");
-		txtFieldInputCPF.setColumns(10);
-		txtFieldInputCPF.setBounds(240, 257, 361, 48);
-		contentPanel.add(txtFieldInputCPF);
-		txtFieldInputCPF.addFocusListener(new FocusAdapter() {
+		txtFieldInputCNPJ = new JTextField();
+		txtFieldInputCNPJ.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		txtFieldInputCNPJ.setForeground(SystemColor.inactiveCaption);
+		txtFieldInputCNPJ.setText("Digite o CNPJ");
+		txtFieldInputCNPJ.setColumns(10);
+		txtFieldInputCNPJ.setBounds(240, 257, 361, 48);
+		contentPanel.add(txtFieldInputCNPJ);
+		txtFieldInputCNPJ.addFocusListener(new FocusAdapter() {
 			   public void focusGained(FocusEvent e) {
-	                if (Validador.VerificaFocoCampo(txtFieldInputCPF.getText())) {
-	                	txtFieldInputCPF.setText("");
+	                if (Validador.VerificaFocoCampo(txtFieldInputCNPJ.getText())) {
+	                	txtFieldInputCNPJ.setText("");
 	                }
 	            }
 
 	            @Override
 	            public void focusLost(FocusEvent e) {
-	                if (txtFieldInputCPF.getText().isBlank()) {
-	                	txtFieldInputCPF.setText("Digite seu CPF");
+	                if (txtFieldInputCNPJ.getText().isBlank()) {
+	                	txtFieldInputCNPJ.setText("Digite o nome da Mecânica");
 	                }
 	            }
 		});
@@ -109,7 +108,6 @@ public class Cadastro_Pessoa extends JDialog {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		
 		// cria o label já invisível
 		JLabel lblCadEfetuado = new JLabel("Cadastro efetuado!");
 		lblCadEfetuado.setForeground(Color.GREEN);
@@ -122,8 +120,8 @@ public class Cadastro_Pessoa extends JDialog {
 		btnEfetuarCadastro.addActionListener(new ActionListener() {
 		    @Override
 		    public void actionPerformed(ActionEvent e) {
-		    	String cpfDigitado = txtFieldInputCPF.getText().trim();
-		        if (Validador.validarCPF(cpfDigitado)) {
+		    	String cnpjDigitadoMec = txtFieldInputCNPJ.getText().trim();
+		        if (Validador.validarCNPJ(cnpjDigitadoMec)) {
 		            lblCadEfetuado.setVisible(true);
 		        } else {
 		            lblCadEfetuado.setVisible(false);
@@ -132,15 +130,15 @@ public class Cadastro_Pessoa extends JDialog {
 		});
 		contentPanel.add(btnEfetuarCadastro);
 		
-		JLabel lblNome = new JLabel("Nome");
-		lblNome.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		lblNome.setBounds(240, 114, 361, 48);
-		contentPanel.add(lblNome);
+		JLabel lblNomeMecanica = new JLabel("Nome da Mecânica");
+		lblNomeMecanica.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblNomeMecanica.setBounds(240, 119, 361, 41);
+		contentPanel.add(lblNomeMecanica);
 		
-		JLabel lblCpf = new JLabel("CPF");
-		lblCpf.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		lblCpf.setBounds(240, 208, 361, 48);
-		contentPanel.add(lblCpf);
+		JLabel lblCnpjMecanica = new JLabel("CNPJ");
+		lblCnpjMecanica.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblCnpjMecanica.setBounds(241, 216, 361, 41);
+		contentPanel.add(lblCnpjMecanica);
 
 		
 		{
@@ -166,4 +164,4 @@ public class Cadastro_Pessoa extends JDialog {
 		}
 	}
 }
-/*end[Pessoas]*/
+/*end[Mecanicas]*/

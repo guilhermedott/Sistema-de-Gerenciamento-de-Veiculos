@@ -1,3 +1,4 @@
+package feature;
 
 import java.awt.FlowLayout;
 
@@ -69,53 +70,53 @@ public class Cadastro extends JDialog {
 			getContentPane().add(titlePage);
 		}
 		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
 		{
-			JButton btnSeguradora = new JButton("Seguradora");
-			btnSeguradora.setFont(new Font("Tahoma", Font.PLAIN, 20));
-			btnSeguradora.addActionListener(new ActionListener() {
+			JButton btnCadPessoa = new JButton("Pessoa");
+			btnCadPessoa.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			btnCadPessoa.addActionListener(new ActionListener() {
 			    public void actionPerformed(ActionEvent e) {
-			        Cadastro_Seguradora dialog = new Cadastro_Seguradora();
+			        Cadastro_Pessoa dialog = new Cadastro_Pessoa();
 			        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			        dialog.setModal(true);
 			        dialog.setVisible(true);
 			    }
 			});
-			btnSeguradora.setBounds(300, 265, 218, 64);
-			getContentPane().add(btnSeguradora);
+			btnCadPessoa.setBounds(300, 120, 218, 64);
+			getContentPane().add(btnCadPessoa);
 		}
 		
+		
+		{
+			JButton btnCarro = new JButton("Carro");
+			btnCarro.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			btnCarro.addActionListener(new ActionListener() {
+			    public void actionPerformed(ActionEvent e) {
+			        Cadastro_Carro dialog = new Cadastro_Carro();
+			        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			        dialog.setModal(true);
+			        dialog.setVisible(true);
+			    }
+			});
+			btnCarro.setBounds(300, 192, 218, 64);
+			getContentPane().add(btnCarro);
+		}
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
 
 

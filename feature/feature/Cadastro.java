@@ -1,3 +1,4 @@
+package feature;
 
 import java.awt.FlowLayout;
 
