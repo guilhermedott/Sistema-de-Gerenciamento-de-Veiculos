@@ -12,7 +12,7 @@
 	<feature name="CPF"/>
 	<feature automatic="selected" manual="selected" name="CNPJ"/>
 	<feature name="Chassis"/>
-	<feature name="NumerodeSerie"/>
+	<feature manual="selected" name="NumerodeSerie"/>
 	<feature automatic="selected" name="Relatorio"/>
 	<feature manual="selected" name="Seguros"/>
 	<feature name="Danos"/>

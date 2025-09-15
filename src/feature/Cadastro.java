@@ -70,21 +70,21 @@ public class Cadastro extends JDialog {
 			getContentPane().add(titlePage);
 		}
 		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		{
+			JButton btnCadPessoa = new JButton("Pessoa");
+			btnCadPessoa.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			btnCadPessoa.addActionListener(new ActionListener() {
+			    public void actionPerformed(ActionEvent e) {
+			        Cadastro_Pessoa dialog = new Cadastro_Pessoa();
+			        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			        dialog.setModal(true);
+			        dialog.setVisible(true);
+			    }
+			});
+			btnCadPessoa.setBounds(300, 120, 218, 64);
+			getContentPane().add(btnCadPessoa);
+		}
+		
 		
 		{
 			JButton btnCarro = new JButton("Carro");
@@ -134,37 +134,37 @@ public class Cadastro extends JDialog {
 
 
 		
-		{
-			JButton btnConcessionaria = new JButton("Concessionária");
-			btnConcessionaria.setFont(new Font("Tahoma", Font.PLAIN, 20));
-			btnConcessionaria.addActionListener(new ActionListener() {
-			    public void actionPerformed(ActionEvent e) {
-			        Cadastro_Concessionaria dialog = new Cadastro_Concessionaria();
-			        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			        dialog.setModal(true);
-			        dialog.setVisible(true);
-			    }
-			});
-			btnConcessionaria.setBounds(300, 411, 218, 64);
-			getContentPane().add(btnConcessionaria);
-		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
-		
-		{
-			JButton btnProduto = new JButton("Produto");
-			btnProduto.setFont(new Font("Tahoma", Font.PLAIN, 20));
-			btnProduto.addActionListener(new ActionListener() {
-			    public void actionPerformed(ActionEvent e) {
-			        Cadastro_Produto dialog = new Cadastro_Produto();
-			        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			        dialog.setModal(true);
-			        dialog.setVisible(true);
-			    }
-			});
-			btnProduto.setBounds(300, 487, 218, 64);
-			getContentPane().add(btnProduto);
-		}
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	}
 
 }
