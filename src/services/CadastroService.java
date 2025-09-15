@@ -11,37 +11,37 @@ import models.Mecanica;
 
 public class CadastroService {
 	
-    private List<Pessoa> pessoas = new ArrayList<>();
-    
+
+
     
     private List<Carro> carros = new ArrayList<>();
     
     
+    private List<Consessionaria> consessionarias = new ArrayList<>();
+    
+    
+    private List<Produto> produtos = new ArrayList<>();
+    
+    
 
 
     
 
 
     
-
-
     
 
 
-    
-    
-    public void cadastrarPessoa(Pessoa pessoa) {
-        if (Validador.validarCPF(pessoa.getCpf())) {
-            pessoas.add(pessoa);
-        } else {
-            return;
-        }
-    }
 
-    public List<Pessoa> listarPessoas() {
-        return pessoas;
-    }
-    
+
+
+
+
+
+
+
+
+
     
     
     public void cadastrarCarro(Carro carro) {
@@ -58,32 +58,32 @@ public class CadastroService {
     
     
     
+    public void cadastrarConsessionaria(Consessionaria consessionaria) {
+        if (Validador.validarCNPJ(consessionaria.getcnpjCons())) {
+            consessionarias.add(consessionaria);
+        } else {
+            return;
+        }
+    }
 
-
-
-
-
-
-
-
-
-
-
-
+    public List<Consessionaria> listarConsessionarias() {
+        return consessionarias;
+    }
     
     
+    
+    public void cadastrarProduto(Produto produto) {
+        if (Validador.validarNumeroSerie(produto.getserialNumber())) {
+            produtos.add(produto);
+        } else {
+            return;
+        }
+    }
 
-
-
-
-
-
-
-
-
-
-
-
+    public List<Produto> listarProdutos() {
+        return produtos;
+    }
+    
     
 
 

@@ -122,11 +122,10 @@ public class Cadastro_Produto extends JDialog {
 		btnEfetuarCadastro.addActionListener(new ActionListener() {
 		    @Override
 		    public void actionPerformed(ActionEvent e) {
-		        // Faz validação pra ver se está válido o número de série
 		        if (Validador.validarNumeroSerie(produto.getserialNumber())) {
-		            lblCadEfetuado.setVisible(true); // mostra se válido
+		            lblCadEfetuado.setVisible(true); 
 		        } else {
-		            lblCadEfetuado.setVisible(false); // esconde se inválido
+		            lblCadEfetuado.setVisible(false); 
 		        }
 		    }
 		});

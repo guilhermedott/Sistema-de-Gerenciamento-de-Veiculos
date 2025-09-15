@@ -2,14 +2,14 @@
 <configuration>
 	<feature automatic="selected" name="SistemadeGerenciamentodeVeiculos"/>
 	<feature automatic="selected" name="Cadastro"/>
-	<feature name="Pessoas"/>
+	<feature manual="selected" name="Pessoas"/>
 	<feature manual="selected" name="Carros"/>
-	<feature name="Mecanicas"/>
-	<feature name="Seguradoras"/>
+	<feature manual="selected" name="Mecanicas"/>
+	<feature manual="selected" name="Seguradoras"/>
 	<feature manual="selected" name="Consessionarias"/>
 	<feature manual="selected" name="Produtos"/>
 	<feature automatic="selected" name="Validacao"/>
-	<feature name="CPF"/>
+	<feature automatic="selected" manual="selected" name="CPF"/>
 	<feature automatic="selected" manual="selected" name="CNPJ"/>
 	<feature automatic="selected" manual="selected" name="Chassis"/>
 	<feature manual="selected" name="NumerodeSerie"/>
@@ -17,11 +17,11 @@
 	<feature manual="selected" name="Seguros"/>
 	<feature manual="selected" name="Danos"/>
 	<feature manual="selected" name="Donos"/>
-	<feature name="Manutencoes"/>
-	<feature name="InfoGerais"/>
+	<feature manual="selected" name="Manutencoes"/>
+	<feature manual="selected" name="InfoGerais"/>
 	<feature automatic="selected" name="Lembretes"/>
-	<feature name="TrocadeComponentes"/>
-	<feature name="Revisoes"/>
+	<feature manual="selected" name="TrocadeComponentes"/>
+	<feature manual="selected" name="Revisoes"/>
 	<feature manual="selected" name="Prazos"/>
-	<feature name="AndamentodeProcessos"/>
+	<feature manual="selected" name="AndamentodeProcessos"/>
 </configuration>
