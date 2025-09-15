@@ -70,101 +70,101 @@ public class Cadastro extends JDialog {
 			getContentPane().add(titlePage);
 		}
 		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
 		{
-			JButton btnCadPessoa = new JButton("Pessoa");
-			btnCadPessoa.setFont(new Font("Tahoma", Font.PLAIN, 20));
-			btnCadPessoa.addActionListener(new ActionListener() {
+			JButton btnMecanica = new JButton("Mecânica");
+			btnMecanica.addActionListener(new ActionListener() {
 			    public void actionPerformed(ActionEvent e) {
-			        Cadastro_Pessoa dialog = new Cadastro_Pessoa();
+			        Cadastro_Mecanica dialog = new Cadastro_Mecanica();
 			        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			        dialog.setModal(true);
 			        dialog.setVisible(true);
 			    }
 			});
-			btnCadPessoa.setBounds(300, 120, 218, 64);
-			getContentPane().add(btnCadPessoa);
+			btnMecanica.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			btnMecanica.setBounds(300, 336, 218, 64);
+			getContentPane().add(btnMecanica);
 		}
 		
 		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
 		{
-			JButton btnCarro = new JButton("Carro");
-			btnCarro.setFont(new Font("Tahoma", Font.PLAIN, 20));
-			btnCarro.addActionListener(new ActionListener() {
+			JButton btnProduto = new JButton("Produto");
+			btnProduto.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			btnProduto.addActionListener(new ActionListener() {
 			    public void actionPerformed(ActionEvent e) {
-			        Cadastro_Carro dialog = new Cadastro_Carro();
+			        Cadastro_Produto dialog = new Cadastro_Produto();
 			        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			        dialog.setModal(true);
 			        dialog.setVisible(true);
 			    }
 			});
-			btnCarro.setBounds(300, 192, 218, 64);
-			getContentPane().add(btnCarro);
+			btnProduto.setBounds(300, 487, 218, 64);
+			getContentPane().add(btnProduto);
 		}
 		
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	}
 
 }

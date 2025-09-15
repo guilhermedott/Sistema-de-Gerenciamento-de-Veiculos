@@ -11,12 +11,6 @@ import models.Mecanica;
 
 public class CadastroService {
 	
-    private List<Pessoa> pessoas = new ArrayList<>();
-    
-    
-    private List<Carro> carros = new ArrayList<>();
-    
-    
 
 
     
@@ -26,89 +20,95 @@ public class CadastroService {
 
 
     
+    private List<Produto> produtos = new ArrayList<>();
+    
+    
+
+
+    
+    private List<Mecanica> mecanicas = new ArrayList<>();
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
 
 
     
     
-    public void cadastrarPessoa(Pessoa pessoa) {
-        if (Validador.validarCPF(pessoa.getCpf())) {
-            pessoas.add(pessoa);
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    public void cadastrarProduto(Produto produto) {
+        if (Validador.validarNumeroSerie(produto.getserialNumber())) {
+            produtos.add(produto);
         } else {
             return;
         }
     }
 
-    public List<Pessoa> listarPessoas() {
-        return pessoas;
+    public List<Produto> listarProdutos() {
+        return produtos;
     }
     
     
+
+
+
+
+
+
+
+
+
+
+
+
     
-    public void cadastrarCarro(Carro carro) {
-        if (Validador.validarChassis(carro.getchassis())) {
-            carros.add(carro);
+    public void cadastrarMecanica(Mecanica mecanica) {
+        if (Validador.validarCNPJ(mecanica.getcnpjMec())) {
+            mecanicas.add(mecanica);
         } else {
             return;
         }
     }
 
-    public List<Carro> listarCarros() {
-        return carros;
+    public List<Mecanica> listarMecanicas() {
+        return mecanicas;
     }
     
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
 }
 	

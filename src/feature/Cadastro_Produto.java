@@ -22,145 +22,145 @@ import java.awt.SystemColor;
 import java.awt.Window;
 import java.awt.Color;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+public class Cadastro_Produto extends JDialog {
+
+	private static final long serialVersionUID = -6776975782784903335L;
+	private final JPanel contentPanel = new JPanel();
+	private JTextField txtFieldInputNomeProd;
+	private JTextField txtFieldInputSerialNumber;
+	Produto produto = new Produto();
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		try {
+			Cadastro_Produto dialog = new Cadastro_Produto();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public Cadastro_Produto() {
+		setBounds(100, 100, 867, 667);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		{
+			JLabel lblPgCadProduto = new JLabel("Cadastro de Produto");
+			lblPgCadProduto.setFont(new Font("Tahoma", Font.PLAIN, 40));
+			lblPgCadProduto.setBounds(238, 27, 365, 64);
+			contentPanel.add(lblPgCadProduto);
+		}
+		
+		txtFieldInputNomeProd = new JTextField();
+		txtFieldInputNomeProd.setForeground(SystemColor.inactiveCaption);
+		txtFieldInputNomeProd.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		txtFieldInputNomeProd.setText("Digite o nome do Produto");
+		txtFieldInputNomeProd.setBounds(240, 162, 361, 48);
+		contentPanel.add(txtFieldInputNomeProd);
+		txtFieldInputNomeProd.setColumns(10);
+		txtFieldInputNomeProd.addFocusListener(new FocusAdapter() {
+			   public void focusGained(FocusEvent e) {
+	                if (Validador.VerificaFocoCampo(txtFieldInputNomeProd.getText())) {
+	                	txtFieldInputNomeProd.setText("");
+	                }
+	            }
+
+	            @Override
+	            public void focusLost(FocusEvent e) {
+	                if (txtFieldInputNomeProd.getText().isBlank()) {
+	                	txtFieldInputNomeProd.setText("Digite o nome do Produto");
+	                }
+	            }
+		});
+		
+		txtFieldInputSerialNumber = new JTextField();
+		txtFieldInputSerialNumber.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		txtFieldInputSerialNumber.setForeground(SystemColor.inactiveCaption);
+		txtFieldInputSerialNumber.setText("Digite o Número de Série");
+		txtFieldInputSerialNumber.setColumns(10);
+		txtFieldInputSerialNumber.setBounds(240, 257, 361, 48);
+		contentPanel.add(txtFieldInputSerialNumber);
+		txtFieldInputSerialNumber.addFocusListener(new FocusAdapter() {
+			   public void focusGained(FocusEvent e) {
+	                if (Validador.VerificaFocoCampo(txtFieldInputSerialNumber.getText())) {
+	                	txtFieldInputSerialNumber.setText("");
+	                }
+	            }
+
+	            @Override
+	            public void focusLost(FocusEvent e) {
+	                if (txtFieldInputSerialNumber.getText().isBlank()) {
+	                	txtFieldInputSerialNumber.setText("Digite o Número de Série");
+	                }
+	            }
+		});
+		
+		JButton btnEfetuarCadastro = new JButton("Cadastrar");
+		btnEfetuarCadastro.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		btnEfetuarCadastro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		
+		// cria o label já invisível
+		JLabel lblCadEfetuado = new JLabel("Cadastro efetuado!");
+		lblCadEfetuado.setForeground(Color.GREEN);
+		lblCadEfetuado.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		lblCadEfetuado.setBounds(300, 484, 258, 58);
+		lblCadEfetuado.setVisible(false);
+		contentPanel.add(lblCadEfetuado);
+
+		btnEfetuarCadastro.setBounds(330, 342, 176, 48);
+		btnEfetuarCadastro.addActionListener(new ActionListener() {
+		    @Override
+		    public void actionPerformed(ActionEvent e) {
+		        if (Validador.validarNumeroSerie(produto.getserialNumber())) {
+		            lblCadEfetuado.setVisible(true); 
+		        } else {
+		            lblCadEfetuado.setVisible(false); 
+		        }
+		    }
+		});
+		contentPanel.add(btnEfetuarCadastro);
+		
+		JLabel lblNomeProduto = new JLabel("Nome do Produto");
+		lblNomeProduto.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblNomeProduto.setBounds(238, 120, 365, 41);
+		contentPanel.add(lblNomeProduto);
+		
+		JLabel lblNumeroDeSrie = new JLabel("Numero de Série");
+		lblNumeroDeSrie.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblNumeroDeSrie.setBounds(238, 221, 365, 41);
+		contentPanel.add(lblNumeroDeSrie);
+
+		{
+			JPanel buttonPane = new JPanel();
+			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
+			getContentPane().add(buttonPane, BorderLayout.SOUTH);
+			{
+				JButton cancelButton = new JButton("Voltar");
+				cancelButton.setActionCommand("Cancel");
+				buttonPane.add(cancelButton);
+
+				// Adicionando a ação para fechar a janela
+				cancelButton.addActionListener(new ActionListener() {
+				    public void actionPerformed(ActionEvent e) {
+				        // Pega a referência da janela a partir do botão
+				        Window window = SwingUtilities.getWindowAncestor(cancelButton);
+				        if (window != null) {
+				            window.dispose();
+				        }
+				    }
+				});
+			}
+		}
+	}
+}

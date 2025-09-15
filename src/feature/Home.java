@@ -85,18 +85,38 @@ public class Home extends JFrame {
 		btnLembretes.setBackground(UIManager.getColor("Button.background"));
 		btnLembretes.setBounds(289, 421, 231, 75);
 		// Aqui adicionamos a ação do botão
-		btnLembretes.addActionListener(e -> {
-		    LembretesPF dialog = new LembretesPF();
-		    dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-		    dialog.setModal(true); // Faz o dialog travar a janela de fundo até fechar
-		    dialog.setVisible(true);
-		});
+		
+
+
+
+
+
+
+
+		
 		btnLembretes.addActionListener(e -> {
 		    LembretesPJ dialog = new LembretesPJ();
 		    dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		    dialog.setModal(true); // Faz o dialog travar a janela de fundo até fechar
 		    dialog.setVisible(true);
 		});
+		
+		
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
 		contentPane.add(btnLembretes);
 	}
 }
